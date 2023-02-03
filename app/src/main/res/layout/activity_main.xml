@@ -14,7 +14,6 @@
         android:id="@+id/view_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_constrainedWight_default="spread"
         android:layout_marginStart="16dp"
         android:layout_marginTop="304dp"
         android:text="view_1"
@@ -101,8 +100,6 @@
         android:id="@+id/Left_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_constraintLeft_toLeftOf="parent"
-        android:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="128dp"
         android:layout_marginTop="88dp"
         android:text="Left View"
@@ -124,31 +121,32 @@
 
     <Button
         android:id="@+id/button2"
-        app:layout_constraintHorizontal_chainStyle="packed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="483dp" />
+        tools:layout_editor_absoluteY="483dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
-        app:layout_constraintHorizontal_chainStyle="packed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        tools:layout_editor_absoluteY="483dp" />-->
+        tools:layout_editor_absoluteY="483dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/view_hide1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:constaintLeft_toLeftOf="parent"
         android:text="view_hide1"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +157,6 @@
         android:id="@+id/view_hide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_goneMarginTop="50dp"
         android:layout_marginStart="96dp"
         android:layout_marginTop="80dp"
         android:text="view_hide2"
@@ -188,9 +185,9 @@
         app:layout_constraintGuide_begin="178dp" />
 
 
-    / app:layout_constraint(x)_to(y)of="(z)"
+    <!-- app:layout_constraint(x)_to(y)of="(z)"
     x - это какойто констрейнт привязываемой view
     y - сторона View к которой мы привязались
     z - id view к которому мы привязались
-
-    />]]>
+    /-->
+</androidx.constraintlayout.widget.ConstraintLayout>
