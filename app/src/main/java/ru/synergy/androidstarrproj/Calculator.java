@@ -14,10 +14,12 @@ import android.widget.Toast;
 public class Calculator extends AppCompatActivity {
 
     private static final String LogcatTag = "CALCULATOR_ACTIVITY";
+    private static final String LifecycleTag = "LIFECYCLE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(LifecycleTag, "I'm on create, and I'm started");
         setContentView(R.layout.activity_calculator);
 
 
@@ -32,6 +34,7 @@ public class Calculator extends AppCompatActivity {
         });
 
     }
+
     private void calculateAnswe() {
         EditText numOne = (EditText) findViewById(R.id.editTextNumberDecimal3);
         EditText numTwo = (EditText) findViewById(R.id.editTextNumberDecimal4);
