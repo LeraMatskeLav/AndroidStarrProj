@@ -19,7 +19,7 @@ public class Calculator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(LifecycleTag, "I'm on create, and I'm started");
+        Log.d(LifecycleTag, "I'm onCreate, and I'm started");
         setContentView(R.layout.activity_calculator);
 
 
@@ -32,7 +32,40 @@ public class Calculator extends AppCompatActivity {
                 calculateAnswe();
             }
         });
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(LogcatTag, "I'm onStart and I'm started");
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(LogcatTag, "I'm onStop and I'm started");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(LogcatTag, "I'm onDestroy and I'm started");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(LogcatTag, "I'm onPause and I'm started");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LogcatTag, "I'm onResume and I'm started");
+    }
+
+    @Override
+    public void setFinishOnTouchOutside(boolean finish) {
+        super.setFinishOnTouchOutside(finish);
     }
 
     private void calculateAnswe() {
